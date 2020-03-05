@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio Example</title>
+
+    <!-- css -->
+    <link href="css/fonts.css" rel="stylesheet" type="text/css" async="">
+    <link href="css/styles.css" rel="stylesheet" type="text/css" async="">
+
+    <!-- ko js-->
+    <script src="./KO/knockout-3.4.2.js" type="text/javascript"></script>
+    <script src="./KO/main.js" type="text/javascript"></script>
+    <!-- <script src="./KO/ko-vm.js" type="text/javascript"></script> -->
+    <script src="./KO/ko-prototype.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+    <div class="top-bar">
+        <div class="home"></div>
+    </div>
+    <div class="left-nav">
+        <div class="l1" data-bind="click: function(){onclick_changeSelected('about')}, css: {'selected': selected() == 'about'}">About</div>
+        <div class="l1" data-bind="click: function(){onclick_changeSelected('projects')}, css: {'selected': selected() == 'projects'}">Projects</div>
+        <div class="l1" data-bind="click: function(){onclick_changeSelected('contact')}, css: {'selected': selected() == 'contact'}">Contact</div>
+    </div>
+    <div class="content">
+        <div class="hero">About me</div>
+        
+
+        <!-- about -->
+        <div data-bind="visible: selected() == 'about'">
+            <div class="container">
+                <div>Organic shabby chic biodiesel artisan. Aesthetic YOLO green juice vaporware, dolore nisi tilde affogato ramps pickled fugiat minim gochujang chicharrones. Cloud bread try-hard DIY, occaecat taxidermy in quinoa subway tile YOLO truffaut yuccie. Live-edge fanny pack freegan kogi, prism etsy biodiesel pariatur affogato drinking vinegar retro sustainable 90's tousled. Leggings kinfolk woke fingerstache drinking vinegar green juice four loko. Keytar food truck non, knausgaard taiyaki humblebrag snackwave kinfolk sartorial tofu cold-pressed pabst microdosing ut. Sartorial tempor activated charcoal normcore edison bulb nulla anim cred health goth ramps.</div>
+                <div class="icon-container">
+                    <div class="icon"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- projects -->
+        <div data-bind="visible: selected() == 'projects'">
+            Projects
+        </div>
+
+        <!-- Contact -->
+        <div data-bind="visible: selected() == 'contact'">
+            Contact
+        </div>
+    </div>
+</body>
+
+</html>
